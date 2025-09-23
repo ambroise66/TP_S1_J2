@@ -1,0 +1,231 @@
+/* Réinitialisation de base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles généraux du corps */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #ffffff;
+    color: #202124;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* En-tête */
+header {
+    width: 100%;
+    padding: 20px 20px 0 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.header-nav {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header a {
+    color: #202124;
+    text-decoration: none;
+    font-size: 13px;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+.apps-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+.apps-button:hover {
+    background-color: #f0f0f0;
+}
+
+.apps-icon {
+    width: 24px;
+    height: 24px;
+    fill: #5f6368;
+}
+
+.sign-in-button {
+    background-color: #1a73e8;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 9px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.sign-in-button:hover {
+    background-color: #155ab6;
+}
+
+/* Contenu principal */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.logo-container {
+    margin-bottom: 25px;
+}
+
+.logo-container img {
+    width: 272px;
+    height: 92px;
+}
+
+form {
+    width: 100%;
+    max-width: 584px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    border: 1px solid #dfe1e5;
+    border-radius: 24px;
+    box-shadow: none;
+    transition: box-shadow 0.3s;
+}
+
+.search-container:hover,
+.search-container:focus-within {
+    box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
+    border-color: #fff;
+}
+
+.search-input {
+    flex-grow: 1;
+    padding: 10px 90px 10px 20px; /* Espace pour les icônes */
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: #202124;
+}
+
+.voice-search-btn,
+.image-search-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    right: 50px; /* Positionnement de l'icône vocale */
+}
+
+.image-search-btn {
+    right: 15px; /* Positionnement de l'icône image */
+}
+
+.voice-search-btn svg,
+.image-search-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+.button-group {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.button-group button {
+    background-color: #f8f9fa;
+    border: 1px solid #f8f9fa;
+    border-radius: 4px;
+    color: #3c4043;
+    font-size: 14px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+.button-group button:hover {
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+    background-color: #f8f9fa;
+    border: 1px solid #dadce0;
+}
+
+/* Pied de page */
+footer {
+    background-color: #f2f2f2;
+    padding: 15px;
+    font-size: 14px;
+    color: #5f6368;
+    border-top: 1px solid #dadce0;
+    position: sticky;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer-region {
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadce0;
+}
+
+.footer-links-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 20px;
+}
+
+.footer-nav a {
+    color: #5f6368;
+    text-decoration: none;
+}
+
+.footer-nav a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive pour mobile */
+@media (max-width: 768px) {
+    .search-input {
+        padding: 10px 80px 10px 15px;
+    }
+
+    .footer-links-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+}
