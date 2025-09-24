@@ -3,63 +3,63 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Google</title>
-        <meta name="description" content="Ceci est une page d'accueil de Google recréée pour un exercice de groupe 6.">
-        <meta name="keywords" content="Google, Page d'accueil, Exercice, Groupe 6">
+        <title>TP - Page d'accueil (Groupe 6)</title>
+        <meta name="description" content="Page d'accueil recréée pour un exercice de groupe — TP Groupe 6. Contenu pédagogique uniquement.">
+        <meta name="keywords" content="TP, exercice, page d'accueil, Groupe 6">
         <meta name="author" content="Groupe 6">
+        <meta name="robots" content="noindex, nofollow">
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
         <header>
             <nav class="header-nav">
-                <a href="https://mail.google.com">Gmail</a>
-                <a href="https://www.google.com/imghp">Images</a>
-                <!--icon pour les applications-->
-                <input type="image" src="https://www.google.com/images/branding/product/1x/apps_2020q4_48dp.png" alt="Applications Google" class="apps-icon" onclick="window.location.href='https://about.google/intl/fr/products/' ">
-                <!-- Button de connexion -->
-                <input type="button" value="Se connecter" class="sign-in-button" onclick="window.location.href='https://accounts.google.com/ServiceLogin?hl=fr&passive=true&continue=https://www.google.com/' ">
-                <!--tr  traduction -->
-                <a href="https://translate.google.com/?hl=fr" class="translate-link">Traduction</a>
-                <!-- météo -->
-                <a href="https://www.google.com/search?q=météo" class="weather-link">Météo</a>
-                <!-- l'heure -->
-                <a href="https://www.google.com/search?q=heure" class="time-link">Heure</a>
+                <a href="https://mail.google.com" target="_blank" rel="noopener">Gmail</a>
+                <a href="https://www.google.com/imghp" target="_blank" rel="noopener">Images</a>
+
+                <!-- suppression des icônes officielles de Google et du lien "Se connecter" vers accounts.google -->
+                <!-- bouton neutre d'informations sur le TP -->
+                <button type="button" class="sign-in-button" onclick="window.open('https://github.com/ambroise66/TP_S1_J2','_blank')" title="Voir le dépôt du TP">À propos du TP</button>
             </nav>
         </header>
+
         <main>
+            <div class="project-banner">Projet étudiant — Reproduction d'interface à des fins pédagogiques. Pas affilié à Google.</div>
+
             <div class="logo-container">
-                <img src="https://www.google.com/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png" alt="Logo de Google">
+                <!-- logo neutre local / textuel pour éviter l'usurpation -->
+                <div class="text-logo">TP — Groupe 6</div>
             </div>
-            <form action="https://www.google.com/search" method="get">
+
+            <form action="#" method="get" aria-label="Formulaire de recherche (désactivé pour raisons pédagogiques)">
                 <div class="search-container">
-                    <input type="text" name="q" placeholder="Rechercher sur Google" class="search-input">
-                    <button type="button" class="voice-search-btn">
-                        <svg class="mic-icon" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285f4" d="m12 15c1.66 0 3-1.31 3-2.97v-7.02c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"></path><path fill="#34a853" d="m12 17.75c2.67 0 5.15-1.03 7.03-2.88l-1.42-1.42c-1.43 1.4-3.5 2.18-5.61 2.18-4.14 0-7.5-3.1-7.5-7.25h-2c0 4.14 3.36 7.5 7.5 7.5v.75z"></path><path fill="#fbbc05" d="m12 17.75c1.23 0 2.4-1.22 3.3-2.18l1.42 1.42c-1.88 1.85-4.36 2.88-7.03 2.88-4.14 0-7.5-3.36-7.5-7.5h2c0 3.36 2.68 6 6 6z"></path><path fill="#ea4335" d="M12 21c-2.76 0-5-2.24-5-5h2c0 1.66 1.34 3 3 3s3-1.34 3-3h2c0 2.76-2.24 5-5 5z"></path></svg>
+                    <input type="text" name="q" placeholder="Recherche (désactivée)" class="search-input" disabled>
+                    <button type="button" class="voice-search-btn" aria-hidden="true">
+                        <!-- icône neutre -->
+                        <svg class="mic-icon" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path fill="#4285f4" d="M12 15c1.66 0 3-1.31 3-2.97V5.01c0-1.66-1.34-3.01-3-3.01s-3 1.34-3 3.01v7.02c0 1.66 1.34 2.97 3 2.97z"></path></svg>
                     </button>
-                    <button type="button" class="image-search-btn">
-                        <svg class="camera-icon" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 10.45c-2.45 0-4.45 2-4.45 4.45s2 4.45 4.45 4.45 4.45-2 4.45-4.45-2-4.45-4.45-4.45zm0 7.75c-1.87 0-3.35-1.48-3.35-3.35s1.48-3.35 3.35-3.35 3.35 1.48 3.35 3.35-1.48 3.35-3.35 3.35zM12 7.75L12 6.5l3.25 1.25L12 7.75zm0 10.45c-2.45 0-4.45 2-4.45 4.45s2 4.45 4.45 4.45 4.45-2 4.45-4.45-2-4.45-4.45-4.45zm0 7.75c-1.87 0-3.35-1.48-3.35-3.35s1.48-3.35 3.35-3.35 3.35 1.48 3.35 3.35-1.48 3.35-3.35 3.35z"></path><path d="M21 4.5l-3.25 1.25L17.75 6zM12 4.5L12 3.5l3.25 1.25L12 4.5zM12 1.5L12 0.5l3.25 1.25L12 1.5z"></path></svg>
+                    <button type="button" class="image-search-btn" aria-hidden="true">
+                        <svg class="camera-icon" focusable="false" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 10.45c-2.45 0-4.45 2-4.45 4.45s2 4.45 4.45 4.45 4.45-2 4.45-4.45-2-4.45-4.45-4.45z"></path></svg>
                     </button>
-                    <a href="https://lens.google.com" class="image-search-btn"></a>
                 </div>
+
                 <div class="button-group">
-                    <button type="submit">Recherche Google</button>
-                    <button type="submit" name="btnI" value="J'ai de la chance">J'ai de la chance</button>
+                    <button type="button" disabled>Recherche Google (désactivée)</button>
+                    <button type="button" disabled>J'ai de la chance (désactivée)</button>
                 </div>
             </form>
         </main>
+
         <footer>
-            <div class="footer-region">Burkina Faso</div>
+            <div class="footer-region">Burkina Faso — Projet étudiant</div>
             <div class="footer-links-container">
                 <nav class="footer-nav">
-                    <a href="https://about.google/">À propos</a>
-                    <a href="https://ads.google.com/">Publicité</a>
-                    <a href="https://www.google.com/intl/fr/about/">Entreprise</a>
-                    <a href="https://www.google.com/search/howsearchworks/">Comment fonctionne la recherche Google?</a>
+                    <a href="https://about.google/" target="_blank" rel="noopener">À propos</a>
+                    <a href="https://ads.google.com/" target="_blank" rel="noopener">Publicité</a>
+                    <a href="https://www.google.com/intl/fr/about/" target="_blank" rel="noopener">Entreprise</a>
                 </nav>
                 <nav class="footer-nav">
-                    <a href="https://www.google.com/intl/fr/policies/privacy/">Confidentialité</a>
-                    <a href="https://www.google.com/intl/fr/policies/terms/">Conditions</a>
-                    <a href="https://www.google.com/preferences">Paramètres</a>
+                    <a href="https://www.google.com/intl/fr/policies/privacy/" target="_blank" rel="noopener">Confidentialité</a>
+                    <a href="https://www.google.com/intl/fr/policies/terms/" target="_blank" rel="noopener">Conditions</a>
                 </nav>
             </div>
         </footer>

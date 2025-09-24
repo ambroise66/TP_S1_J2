@@ -217,6 +217,35 @@ footer {
     text-decoration: underline;
 }
 
+/* Banner de projet */
+.project-banner {
+    width: 100%;
+    background: #fff4e5;
+    color: #6a4b00;
+    text-align: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid #f0cfa8;
+    font-size: 14px;
+}
+
+/* logo textuel neutre */
+.text-logo {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 36px;
+    font-weight: 700;
+    color: #333;
+    letter-spacing: 1px;
+    text-align: center;
+    padding: 8px 0;
+}
+
+/* désactiver l'apparence des boutons non fonctionnels */
+.button-group button[disabled] {
+    opacity: 0.6;
+    cursor: not-allowed;
+    background-color: #ececec;
+}
+
 /* Responsive pour mobile */
 @media (max-width: 768px) {
     .search-input {
