@@ -18,6 +18,12 @@
                 <input type="image" src="https://www.google.com/images/branding/product/1x/apps_2020q4_48dp.png" alt="Applications Google" class="apps-icon" onclick="window.location.href='https://about.google/intl/fr/products/' ">
                 <!-- Button de connexion -->
                 <input type="button" value="Se connecter" class="sign-in-button" onclick="window.location.href='https://accounts.google.com/ServiceLogin?hl=fr&passive=true&continue=https://www.google.com/' ">
+                <!--tr  traduction -->
+                <a href="https://translate.google.com/?hl=fr" class="translate-link">Traduction</a>
+                <!-- météo -->
+                <a href="https://www.google.com/search?q=météo" class="weather-link">Météo</a>
+                <!-- l'heure -->
+                <a href="https://www.google.com/search?q=heure" class="time-link">Heure</a>
             </nav>
         </header>
         <main>
@@ -57,33 +63,5 @@
                 </nav>
             </div>
         </footer>
-        <script>
-            const voiceSearchBtn = document.querySelector('.voice-search-btn');
-            const searchInput = document.querySelector('.search-input');
-
-            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-
-            if (SpeechRecognition) {
-                const recognition = new SpeechRecognition();
-                recognition.lang = 'fr-FR'; // Langue de la reconnaissance
-                recognition.interimResults = false;
-                recognition.maxAlternatives = 1;
-
-                voiceSearchBtn.addEventListener('click', () => {
-                    recognition.start();
-                });
-
-                recognition.onresult = (event) => {
-                    const result = event.results[0][0].transcript;
-                    searchInput.value = result;
-                };
-
-                recognition.onerror = (event) => {
-                    console.error('Erreur de reconnaissance vocale :', event.error);
-                };
-            } else {
-                console.warn('Votre navigateur ne prend pas en charge l\'API de reconnaissance vocale.');
-            }
-        </script>
     </body>
 </html>
